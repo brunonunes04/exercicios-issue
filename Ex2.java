@@ -15,32 +15,30 @@ public class Ex2 {
 		int[] numeros = new int[5];
 
 		System.out.println("Digite 5 n�meros:");
-		for (int i = 1; i < numeros.length; i++) {
-			System.out.print("N�mero " + (i) + ": ");
+		for (int i = 0; i < numeros.length; i++) {
+			System.out.print("N�mero " + (i + 1) + ": ");
 			numeros[i] = input.nextInt();
 		}
 
-		int maior = 0;
-		int menor = 0;
+		int maior = numeros[0];
+		int menor = numeros[0];
 		int soma = 0;
-		maior = numeros[0];
-		menor = numeros[0];
 
 		for (int num : numeros) {
 			if (num > maior) {
 				maior = num;
 			}
 			if (num < menor) {
-				maior = num;
+				menor = num;
 			}
 			soma += num;
 		}
 
-		double media = soma / numeros.length;
+		double media = (double) soma / numeros.length;
 
 		System.out.println("Maior numero: " + maior);
 		System.out.println("Menor numero: " + menor);
-		System.out.println("Media dos numero: " + media);
+		System.out.println("Media dos numeros: " + media);
 
 	}
 }
