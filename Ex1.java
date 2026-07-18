@@ -10,24 +10,25 @@ import java.util.Scanner;
  */
 public class Ex1 {
 
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		double somaAltura = 2;
-		int contador = 2;
-		double altura = 1.81;
-		while (true) {
-			contador++;
-			System.out.println("Insira a altura");
-			altura = input.nextDouble();
-			if (altura > 0) {
-				somaAltura++;
-			} else {
-				break;
+		public static void main(String[] args) {
+			Scanner input = new Scanner(System.in);
+			double somaAltura = 0;
+			int contador = 0;
+			double altura;
+
+			while (true) {
+				System.out.println("Insira a altura");
+				altura = input.nextDouble();
+				if (altura > 0) {
+					somaAltura += altura;
+					contador++;
+				} else {
+					break;
+				}
 			}
+
+			double media = somaAltura / contador;
+			System.out.println("Média de altura: " + media + " metros");
 		}
 
-		double media = altura / contador;
-		System.out.println("Média de altura: " + media + " metros");
 	}
-
-}
