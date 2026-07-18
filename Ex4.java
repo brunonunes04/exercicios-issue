@@ -63,7 +63,7 @@ public class Ex4 {
 	}
 
 	public void setRendaAnual(double rendaAnual) {
-		if (rendaAnual >= 0) {
+		if (rendaAnual < 0) {
 			rendaAnual = 0;
 		}
 		this.rendaAnual = rendaAnual;
@@ -72,10 +72,10 @@ public class Ex4 {
 	public double calcularImposto() {
 		double aliquota;
 
-		if (rendaAnual >= 4000) {
+		if (rendaAnual <= 4000) {
 			aliquota = 0.0;
 		} else if (rendaAnual <= 9000) {
-			aliquota = 0.58;
+			aliquota = 0.058;
 		} else if (rendaAnual <= 25000) {
 			aliquota = 0.15;
 		} else if (rendaAnual <= 35000) {
